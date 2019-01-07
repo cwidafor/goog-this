@@ -5,7 +5,7 @@ module.exports = {
     'style-resources-loader': {
       preProcessor: 'scss',
       patterns: [
-        '/Users/chris/Desktop/apps/google/src/scss/styles.scss',
+        path.resolve(__dirname, 'src/scss/styles.scss'),
       ]
     }
   }

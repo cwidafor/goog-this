@@ -1,7 +1,11 @@
 <template>
     <div class="key-wizard">
         <key v-if="needsPressed.length === 0">Enter</key>
-        <key v-for="key in needsPressed" :key="key">{{ key }}</key>
+        <key v-for="(key,index) in needsPressed" 
+            :key="index">
+            <span v-if="key === ' '">Space</span>
+            <span v-else>{{ key }}</span>
+        </key>
     </div>
 </template>
 
@@ -26,6 +30,7 @@ export default {
 
 <style lang="scss" scoped>
 .key-wizard{
+    margin-top: 2rem;
     display: flex;
 }
 </style>

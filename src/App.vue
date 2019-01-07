@@ -44,11 +44,11 @@ export default {
     },
     getCulprit: function(){
       var urlParams = new URLSearchParams(window.location.search);
-      console.log(urlParams);
+      this.culprit = urlParams.get('q').split('_').join(' ');
     }
   },
   created: function(){
-
+    this.getCulprit();
   }
 }
 </script>
@@ -56,7 +56,7 @@ export default {
 <style lang="scss">
 #app {
   width: 100%;
-  height: 70vh;
+  height: 72vh;
   display: flex;
   flex-direction: column;
   align-items: center;

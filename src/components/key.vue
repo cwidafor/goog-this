@@ -25,7 +25,7 @@ export default {
     -webkit-border-radius:3px;
     -moz-border-radius:3px;
     border-radius:3px;
-    margin:2px 3px;
+    margin:2px 6px;
     padding:1px 5px;
 }
 </style>

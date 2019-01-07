@@ -1,6 +1,6 @@
 <template>
     <div class="smart-input">
-        <input type="text" v-model="input">
+        <input type="text" v-model="input" v-on:keyup.enter="submission">
         <p>{{ goal }}</p>
     </div>
 </template>
@@ -23,6 +23,11 @@ export default {
     data(){
         return{
             input: ''
+        }
+    },
+    methods: {
+        submission: function(){
+            window.location = 'https://google.com/search?q=' + this.goal;
         }
     }
 }
@@ -65,7 +70,7 @@ p{
     font: 16px arial,sans-serif;
     line-height: 34px;
     height: 34px !important;
-    width: 100%;
-    position: absolute
+    position: absolute;
+    pointer-events: none;
 }
 </style>
